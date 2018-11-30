@@ -44,6 +44,24 @@ function checkAnswers(answer) {  // Matches Scenes  - replace with yours
 	  else if (answer == "Go To Item Vender") {
 		itemVender();  
 	 }
+	  else if (answer == "Go Back(forest)") {
+		forestExamine();  
+	 }
+	  else if (answer == "Look Around(Field)") {
+		fieldExamine();  
+	 }
+	  else if (answer == "Go To Pipe") {
+		pipe();
+	 }
+	  else if (answer == "Go To Wolf") {
+		injuredWolf();  
+	 }
+	  else if (answer == "Go To Warlock") {
+		travelingWarlock();  
+	 }
+	  else if (answer == "Go Into The Pipe") {
+		sewer();  
+	 }
 }
 
 
@@ -52,7 +70,6 @@ var name = prompt("what is your name?");
 story("You a young dragon are heading back home from you treasure hunting journey when suddenly you hear a voice from the forest saying \
 \n Come into the forest " + name + " your adventure is just beginning");
 
- 
   choices = ["Think more", "Go forest", "Ignore it"];
   answer = setOptions(choices);
 } 
@@ -61,7 +78,6 @@ story("You a young dragon are heading back home from you treasure hunting journe
   story("As you think about this you feel that this situation is very familiar to you\
   \n or your probably thinking about it to much.");
  
-  
   choices = ["Go in", "Go home"];
   answer = setOptions(choices);  
 }
@@ -81,6 +97,63 @@ story("You a young dragon are heading back home from you treasure hunting journe
   choices = ["Go To Portal","Go To Field","Go To Item Vender"];
   answer = setOptions(choices);
 }
+
+ function portal() {
+  story("You walk towards a glowing portal on the ground, \
+  \n you are unsure about it and get an uneasy feeling about it.");
+  
+  choices = ["Step On To Portal","Go Back(forest)",""];
+  answer = setOptions(choices);
+}
+
+ function itemVender() {
+  story("You head towards the item vender and you see that he has many items like \
+  \n a healing potion, a apple pie, a bone, an antidote for poison and an axe \
+  \n you think about what you should get. (You can only hold 3 items)");
+  
+  choices = ["Potion","Pie","The Bone","Antidote","Axe","Go Back(forest)"];
+  answer = setOptions(choices);
+}
+
+ function field() {
+  story("You head towards the clearing and go to the field to see what's ahead.");
+  
+  choices = ["Look Around(Field)","Go Back(forest)",""];
+  answer = setOptions(choices);
+}
+
+ function fieldExamine() {
+  story("You look around the big open field to see \
+  \n a pipe that blends in well with grass in the field, a wolf that looks like its been injured \
+  \n and a warlock that seems to be traveling.");
+  
+  choices = ["Go To Pipe","Go To Wolf","Go To Warlock","Go Back(forest)"];
+  answer = setOptions(choices);
+}
+
+ function pipe() {
+  story("You walk up to the pipe and you see that it has an entrance at the top of it \
+  \n and you think that this seems familiar.");
+  
+  choices = ["Go Into The Pipe","Go Back(Field)",""];
+  answer = setOptions(choices);
+}
+
+ function injuredWolf() {
+  story("");
+  
+  choices = ["Give Potion","Give Bone","Go Back(Field)"];
+  answer = setOptions(choices);
+}
+
+ function travelingWarlock() {
+  story("");
+  
+  choices = ["Talk To Him","Give Antidote","Give Pie","Go Back(Field)"];
+}
+
+
+ 
  function home() {
   story("You decided to ignore the voice and go home\
   \n as you are heading back home you think to yourself\

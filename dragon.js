@@ -62,6 +62,9 @@ function checkAnswers(answer) {  // Matches Scenes  - replace with yours
 	  else if (answer == "Go Into The Pipe") {
 		sewer();  
 	 }
+	  else if (answer == "Look Around(Sewer)") {
+		sewerExamine();  
+	 }
 }
 
 
@@ -150,6 +153,14 @@ story("You a young dragon are heading back home from you treasure hunting journe
   story("");
   
   choices = ["Talk To Him","Give Antidote","Give Pie","Go Back(Field)"];
+  answer = setOptions(choices);
+}
+
+ function sewer() {
+  story("");
+  
+  choices = ["Look Around(Sewer)","Go Back(Field)"];
+  answer = setOptions(choices);
 }
 
 

@@ -5,13 +5,12 @@
 var messages = []; // for a sequence of messages
 var choices = [];
 var answer = null;
-// story function variables
 var name = null;
 var spin = 0;
 
 var start = function () {
-    setup(); // Helper Function
-    voiceInForest();  // Change this to fit your first scene
+    setup(); 
+    voiceInForest();  
 }
 
 window.onload = start;  // Kicks off program
@@ -78,8 +77,8 @@ story("You a young dragon are heading back home from you treasure hunting journe
 } 
   
  function thinking() {  // SET A SCENE
-  story("As you think about this you feel that this situation is very familiar to you\
-  \n or your probably thinking about it to much.");
+  story("As you think about this you feel that this situation is very familiar to you.\
+  \n That or your probably thinking about it to much.");
  
   choices = ["Go in", "Go home"];
   answer = setOptions(choices);  
@@ -102,15 +101,15 @@ story("You a young dragon are heading back home from you treasure hunting journe
 }
 
  function portal() {
-  story("You walk towards a glowing portal on the ground, \
-  \n you are unsure about it and get an uneasy feeling about it.");
+  story("You walk towards a glowing portal on the ground. \
+  \n You are unsure about it and get an uneasy feeling about it.");
   
   choices = ["Step On To Portal","Go Back(forest)",""];
   answer = setOptions(choices);
 }
 
  function itemVender() {
-  story("You head towards the item vender and you see that he has many items like \
+  story("You head towards the item vender and you see that he has many items. Like \
   \n a healing potion, a apple pie, a bone, an antidote for poison and an axe \
   \n you think about what you should get. (You can only hold 3 items)");
   
@@ -135,35 +134,53 @@ story("You a young dragon are heading back home from you treasure hunting journe
 }
 
  function pipe() {
-  story("You walk up to the pipe and you see that it has an entrance at the top of it \
-  \n and you think that this seems familiar.");
+  story("You walk up to the pipe and you see that it has an entrance at the top of it. \
+  \n You think that this seems familiar.");
   
   choices = ["Go Into The Pipe","Go Back(Field)",""];
   answer = setOptions(choices);
 }
 
  function injuredWolf() {
-  story("");
+  story("You head towards the wolf to take a closer look. \
+   n\ As you look over the wolf you see a lot of scratches on its body. \
+   n\ You believe that this wolf got separated from it's pack and got attacked \
+   n\ by something in the forest.");
   
   choices = ["Give Potion","Give Bone","Go Back(Field)"];
   answer = setOptions(choices);
 }
 
  function travelingWarlock() {
-  story("");
+  story("As you walk towards the warlock you notice that he looks kind of orcish. \
+  n\ Then you suddenly get a scent that is very familiar to you. \
+  n\ As you see that he is getting weaker you realize what that scent might be. \
+  n\ You hope that your wrong about it so you believe that you should ask him.");
   
   choices = ["Talk To Him","Give Antidote","Give Pie","Go Back(Field)"];
   answer = setOptions(choices);
 }
 
  function sewer() {
-  story("");
+  story("You jump into the to see where it will take you \
+  \n and you are taken into a sewer. You think that there is a \
+  \n secret room somewhere because sewer usually hide secrets.");
   
   choices = ["Look Around(Sewer)","Go Back(Field)"];
   answer = setOptions(choices);
 }
 
-
+ function sewerExamine() {
+  story("As you look around the sewer not see anything \
+  n\ that indicates that there are any secrets. \
+  n\ Maybe if you had companion that knows this sewer they could \
+  n\ find any secrets. But right now the smell of the sewer \
+  n\ is making you want to throw up so you think it would be a \
+  n\ good idea to leave this place NOW!");
+  
+  choices = ["Go Back(Field)"];
+  answer = setOptions(choices);
+}
  
  function home() {
   story("You decided to ignore the voice and go home\

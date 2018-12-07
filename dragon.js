@@ -16,19 +16,19 @@ var start = function () {
 window.onload = start;  // Kicks off program
 
 function checkAnswers(answer) {  // Matches Scenes  - replace with yours
-    if (answer == "Think more") {
+    if (answer == "Think More") {
        thinking();
      } 
-      else if (answer == "Go forest") {
+      else if (answer == "Go Forest") {
         forest();
      }
-	  else if (answer == "Ignore it") {
+	  else if (answer == "Ignore It") {
 		home(); 
 	 }
-	  else if (answer == "Go in"){
+	  else if (answer == "Go In"){
 		forest();
 	 }
-	  else if (answer == "Go home"){
+	  else if (answer == "Go Home"){
 		home();
 	 }
 	  else if (answer == "Go To Portal"){
@@ -64,6 +64,9 @@ function checkAnswers(answer) {  // Matches Scenes  - replace with yours
 	  else if (answer == "Look Around(Sewer)") {
 		sewerExamine();  
 	 }
+	  else if (answer == "Go Back(Field)") {
+		fieldExamine();  
+	 }
 }
 
 
@@ -72,7 +75,7 @@ var name = prompt("what is your name?");
 story("You a young dragon are heading back home from you treasure hunting journey when suddenly you hear a voice from the forest saying \
 \n Come into the forest " + name + " your adventure is just beginning");
 
-  choices = ["Think more", "Go forest", "Ignore it"];
+  choices = ["Think More", "Go Forest", "Ignore It"];
   answer = setOptions(choices);
 } 
   
@@ -80,12 +83,12 @@ story("You a young dragon are heading back home from you treasure hunting journe
   story("As you think about this you feel that this situation is very familiar to you.\
   \n That or your probably thinking about it to much.");
  
-  choices = ["Go in", "Go home"];
+  choices = ["Go In", "Go Home"];
   answer = setOptions(choices);  
 }
   
  function forest() {
-  story("You go into the forest to see what you sort of an adventure is in there\
+  story("You go into the forest to see what sort of an adventure is in there\
   \n and any secrets you find along the way.");
   
   choices = ["Go To Portal","Look Around(Forest)","Hang Out Here"];
@@ -143,9 +146,9 @@ story("You a young dragon are heading back home from you treasure hunting journe
 
  function injuredWolf() {
   story("You head towards the wolf to take a closer look. \
-   n\ As you look over the wolf you see a lot of scratches on its body. \
-   n\ You believe that this wolf got separated from it's pack and got attacked \
-   n\ by something in the forest.");
+   \n As you look over the wolf you see a lot of scratches on its body. \
+   \n You believe that this wolf got separated from it's pack and got attacked \
+   \n by something in the forest.");
   
   choices = ["Give Potion","Give Bone","Go Back(Field)"];
   answer = setOptions(choices);
@@ -153,9 +156,9 @@ story("You a young dragon are heading back home from you treasure hunting journe
 
  function travelingWarlock() {
   story("As you walk towards the warlock you notice that he looks kind of orcish. \
-  n\ Then you suddenly get a scent that is very familiar to you. \
-  n\ As you see that he is getting weaker you realize what that scent might be. \
-  n\ You hope that your wrong about it so you believe that you should ask him.");
+  \n Then you suddenly get a scent that is very familiar to you. \
+  \n As you see that he is getting weaker you realize what that scent might be. \
+  \n You hope that your wrong about it so you believe that you should ask him.");
   
   choices = ["Talk To Him","Give Antidote","Give Pie","Go Back(Field)"];
   answer = setOptions(choices);
@@ -171,12 +174,12 @@ story("You a young dragon are heading back home from you treasure hunting journe
 }
 
  function sewerExamine() {
-  story("As you look around the sewer not see anything \
-  n\ that indicates that there are any secrets. \
-  n\ Maybe if you had companion that knows this sewer they could \
-  n\ find any secrets. But right now the smell of the sewer \
-  n\ is making you want to throw up so you think it would be a \
-  n\ good idea to leave this place NOW!");
+  story("As you look around the sewer you do not see anything \
+  \n that indicates that there are any secrets. \
+  \n Maybe if you had companion that knows this sewer they could \
+  \n find any secrets. But right now the smell of the sewer \
+  \n is making you want to throw up so you think it would be a \
+  \n good idea to leave this place NOW!");
   
   choices = ["Go Back(Field)"];
   answer = setOptions(choices);

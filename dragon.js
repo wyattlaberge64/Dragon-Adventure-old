@@ -16,63 +16,63 @@ var start = function () {
 window.onload = start;  // Kicks off program
 
 function checkAnswers(answer) {  // Matches Scenes  - replace with yours
-    if (answer == "Think More") {
-       thinking();
-     } 
-      else if (answer == "Go Forest") {
-        forest();
-     }
-	  else if (answer == "Ignore It") {
-		home(); 
-	 }
-	  else if (answer == "Go In"){
-		forest();
-	 }
-	  else if (answer == "Go Home"){
-		home();
-	 }
-	  else if (answer == "Go To Portal"){
-		portal();
-	 }
-	  else if (answer == "Look Around(Forest)") {
-		forestExamine();
-	 }
-	  else if (answer == "Go To Field") {
-		field(); 
-	 }
-	  else if (answer == "Go To Item Vender") {
-		itemVender();  
-	 }
-	  else if (answer == "Go Back(forest)") {
-		forestExamine();  
-	 }
-	  else if (answer == "Look Around(Field)") {
-		fieldExamine();  
-	 }
-	  else if (answer == "Go To Pipe") {
-		pipe();
-	 }
-	  else if (answer == "Go To Wolf") {
-		injuredWolf();  
-	 }
-	  else if (answer == "Go To Warlock") {
-		travelingWarlock();  
-	 }
-	  else if (answer == "Go Into The Pipe") {
-		sewer();  
-	 }
-	  else if (answer == "Look Around(Sewer)") {
-		sewerExamine();  
-	 }
-	  else if (answer == "Go Back(Field)") {
-		fieldExamine();  
-	 }
+case "Think More":
+        thinking
+		break; 
+case "Go Forest":
+        forest
+		break;
+case "Ignore It":
+		home
+		break;
+case "Go In":
+		forest
+		break;
+case "Go Home":
+		home
+		break;
+case "Go To Portal":
+		portal
+		break;
+case "Look Around(Forest)":
+		forestExamine
+		break;
+case "Go To Field":
+		field
+		break;
+case "Go To Item Vender":
+		itemVender
+		break;
+case "Go Back(forest)":
+		forestExamine
+		break;
+case "Look Around(Field)":
+		fieldExamine
+		break;
+case "Go To Pipe":
+		pipe
+		break;
+case "Go To Wolf":
+		injuredWolf
+		break;
+case "Go To Warlock":
+		travelingWarlock
+		break;
+case "Go Into The Pipe":
+		sewer
+		break;
+case "Look Around(Sewer)":
+		sewerExamine
+		break;
+case "Go Back(Field)":
+		fieldExamine
+		break;
 }
 
 // L1S1
 function voiceInForest(){  // FIRST SCENE - WELCOMES PLAYER
 var name = prompt("what is your name?");
-story("You are a young dragon are heading back home from you treasure hunting journey. When suddenly you hear a voice from the forest saying \
+story("You are a young dragon is heading back home from your treasure hunting journey. When suddenly you hear a voice from the forest saying \
 \n Come into the forest " + name + " your adventure is just beginning.");
 
   choices = ["Think More", "Go Forest", "Ignore It"];
@@ -118,15 +118,15 @@ story("You are a young dragon are heading back home from you treasure hunting jo
  //L1S6
  function itemVender() {
   story("You head towards the item vender and you see that he has many items. Like \
-  \n a healing potion, a apple pie, a bone, an antidote for poison and an axe \
-  \n you think about what you should get. (You can only hold 3 items)");
+  \n a healing potion, a apple pie, a bone for some reason, an antidote for poison and an Axe. \
+  \n You think about what you should get. (You can only hold 3 items)");
   
   choices = ["Potion","Pie","The Bone","Antidote","Axe","Go Back(forest)"];
   answer = setOptions(choices);
 }
  //L1S7
  function field() {
-  story("You head towards the clearing. Heading to the field to see what's ahead.");
+  story("You walk towards the clearing. Heading to the field to see what's ahead.");
   
   choices = ["Look Around(Field)","Go Back(forest)",""];
   answer = setOptions(choices);
@@ -144,7 +144,7 @@ story("You are a young dragon are heading back home from you treasure hunting jo
  
  //L1S9
  function pipe() {
-  story("You walk up to the pipe and you see that it has an entrance at the top of it. \
+  story("You walk up to the pipe. You can see that it has an entrance at the top of it. \
   \n You think that this seems familiar.");
   
   choices = ["Go Into The Pipe","Go Back(Field)",""];
@@ -175,7 +175,7 @@ story("You are a young dragon are heading back home from you treasure hunting jo
  
  //L1S12
  function sewer() {
-  story("You jump into the to see where it will take you \
+  story("You jump into the pipe to see where it will take you \
   \n and you are taken into a sewer. You think that there is a \
   \n secret room somewhere because sewer usually hide secrets.");
   
@@ -187,7 +187,7 @@ story("You are a young dragon are heading back home from you treasure hunting jo
  function sewerExamine() {
   story("As you look around the sewer you do not see anything \
   \n that indicates that there are any secrets. \
-  \n Maybe if you had companion that knows this sewer they could \
+  \n Maybe if you had a companion(or some type of animal) that knows this sewer they could \
   \n find any secrets. But right now the smell of the sewer \
   \n is making you want to throw up. So you think it would be a \
   \n good idea to leave this place NOW!");

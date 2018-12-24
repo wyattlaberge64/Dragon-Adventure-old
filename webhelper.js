@@ -1,11 +1,22 @@
-var buttonElement = document.getElementById("button1");
-
 window.onload = start;
 
+var buttonElement = document.getElementById("button1");
+
 function start() {
-    setup();
-    // town();
-    town();
+    setup(); 
+    voiceInForest();  
+}
+
+function setup() {
+    // setOptions();
+    setOptions(["test 1", "test 2", "test3"]); 
+    var buttonElement = document.getElementById("button1");
+    buttonElement.innerHTML = "What will you do?"; 
+    buttonElement.onclick = function () {
+	    var dropdown = document.getElementById("choices");
+	    console.log(dropdown.value);
+	    checkAnswers(dropdown.value);
+	}
 }
 
 function story(text) {
@@ -42,14 +53,3 @@ function delayText(text, delay) {
 }
 
 
-function setup() {
-    // setOptions();
-    setOptions(["test 1", "test 2", "test3"]); 
-    var buttonElement = document.getElementById("button1");
-    buttonElement.innerHTML = "What will you do?"; 
-    buttonElement.onclick = function () {
-    var dropdown = document.getElementById("choices");
-    console.log(dropdown.value);
-    checkAnswers(dropdown.value);
-}
-}

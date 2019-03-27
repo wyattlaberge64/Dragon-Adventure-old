@@ -1,72 +1,60 @@
 /* This is a starter with examples.  Remove the examples once you have made your own versions. */
-
-'use strict'
-// core variables
-var messages = []; // for a sequence of messages
-var choices = [];
-var answer = null;
-var name = null;
-var spin = 0;
-
-var start = function () {
-    setup(); 
-    voiceInForest();  
-}
-
-window.onload = start;  // Kicks off program
+scene1 = voiceInForest;
 
 function checkAnswers(answer) {  // Matches Scenes  - replace with yours
-case "Think More":
-        thinking
-		break; 
-case "Go Forest":
-        forest
-		break;
-case "Ignore It":
-		home
-		break;
-case "Go In":
-		forest
-		break;
-case "Go Home":
-		home
-		break;
-case "Go To Portal":
-		portal
-		break;
-case "Look Around(Forest)":
-		forestExamine
-		break;
-case "Go To Field":
-		field
-		break;
-case "Go To Item Vender":
-		itemVender
-		break;
-case "Go Back(forest)":
-		forestExamine
-		break;
-case "Look Around(Field)":
-		fieldExamine
-		break;
-case "Go To Pipe":
-		pipe
-		break;
-case "Go To Wolf":
-		injuredWolf
-		break;
-case "Go To Warlock":
-		travelingWarlock
-		break;
-case "Go Into The Pipe":
-		sewer
-		break;
-case "Look Around(Sewer)":
-		sewerExamine
-		break;
-case "Go Back(Field)":
-		fieldExamine
-		break;
+switch(answer) {
+	case "Think More":
+			thinking
+			break; 
+	case "Go Forest":
+			forest
+			break;
+	case "Ignore It":
+			home
+			break;
+	case "Go In":
+			forest
+			break;
+	case "Go Home":
+			home
+			break;
+	case "Go To Portal":
+			portal
+			break;
+	case "Look Around(Forest)":
+			forestExamine
+			break;
+	case "Go To Field":
+			field
+			break;
+	case "Go To Item Vender":
+			itemVender
+			break;
+	case "Go Back(forest)":
+			forestExamine
+			break;
+	case "Look Around(Field)":
+			fieldExamine
+			break;
+	case "Go To Pipe":
+			pipe
+			break;
+	case "Go To Wolf":
+			injuredWolf
+			break;
+	case "Go To Warlock":
+			travelingWarlock
+			break;
+	case "Go Into The Pipe":
+			sewer
+			break;
+	case "Look Around(Sewer)":
+			sewerExamine
+			break;
+	case "Go Back(Field)":
+			fieldExamine
+			break;
+	}
 }
 
 // L1S1
